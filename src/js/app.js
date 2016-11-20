@@ -1,7 +1,5 @@
-angular.module('ChatApp', ['ngRoute']);
-
-angular.module('ChatApp').config(['$routeProvider',
-function ($routeProvider) {
+angular.module('ChatApp', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngSanitize'])
+.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: 'views/home.html',
         controller: 'HomeController'

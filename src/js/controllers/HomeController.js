@@ -1,5 +1,6 @@
 angular.module('ChatApp').controller("HomeController",
-    ['$scope', '$location',
+    ['$scope', '$location', 
         function($scope, $location) {
+
 
         }]);
