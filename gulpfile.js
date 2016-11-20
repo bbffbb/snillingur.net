@@ -51,10 +51,9 @@ gulp.task('html', function () {
 
 gulp.task('libs', function () {
     gulp.src([
-      'libs/materialize/dist/js/materialize.js',
-      'libs/materialize/dist/css/materialize.css',
       'libs/jquery/dist/jquery.min.js',
       'libs/angular/angular.min.js',
+      'libs/angular-touch/angular-touch.min.js',
       'libs/angular-animate/angular-animate.min.js',
       'libs/angular-aria/angular-aria.min.js',
       'libs/angular-messages/angular-messages.min.js',
@@ -90,6 +89,11 @@ gulp.task('views', function () {
     .pipe(gulp.dest('build/views'));
 });
 
+gulp.task('directives', function () {
+    gulp.src('src/js/directives/**/*.html')
+    .pipe(gulp.dest('build/directives'));
+});
+
 
 
 // configure which files to watch and what tasks to use on file changes
@@ -98,6 +102,7 @@ gulp.task('watch', function () {
     gulp.watch('src/css/**/*.css', ['css']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/views/*.html', ['views']);
+    gulp.watch('src/directives/*.html', ['directives']);
 });
 
 gulp.task('server', function () {
@@ -108,5 +113,5 @@ gulp.task('server', function () {
     }));
 });
 
-gulp.task('build', ['js', 'css', 'html', 'libs', 'fonts', 'img', 'views']);
+gulp.task('build', ['js', 'css', 'html', 'libs', 'fonts', 'img', 'views', 'directives']);
 gulp.task('default', ['build']);
