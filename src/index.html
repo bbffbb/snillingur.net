@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 
   <link href="libs/angular-material.min.css" rel="stylesheet" />
   <link href="libs/bootstrap.min.css" rel="stylesheet" />
@@ -24,16 +26,43 @@
 
 <body ng-app="ChatApp">
 
-  <div ng-controller="HomeController" ng-cloak>
-    <md-content class="md-padding">
-      <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-        <md-nav-item md-nav-href="#/" name="page1">Home</md-nav-item>
-        <md-nav-item md-nav-href="#about" name="page2">About</md-nav-item>
-      </md-nav-bar>
-      <div class="ext-content">
-        <div ng-view></div>
+
+  <div layout="column">
+    <div flex>
+      <tool-bar></tool-bar>
+    </div>
+    <div flex>
+      <div layout="row" style="height:100%">
+        <div>
+          <side-nav></side-nav>
+        </div>
+        <div flex>
+          <md-content layout-padding layout-align="top center">
+            <div ng-view></div>
+          </md-content>
+        </div>
       </div>
-    </md-content>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
