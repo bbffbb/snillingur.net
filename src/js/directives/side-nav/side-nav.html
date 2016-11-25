@@ -1,22 +1,45 @@
-<div ng-controller="HomeController" layout="column" ng-cloak>
-  <div layout="row" flex>
-    <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
-      
-      <md-content layout-padding>
-        <!--link list-->
-        <md-list>
-          <md-list-item class="md-2-line">
-            <div class="md-list-item-text">
-              <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-                <md-button style="width:100%" ng-href="#about" name="aboutMe">About</md-button>
-              </section>
-            </div>
-          </md-list-item>
-        </md-list>
+<md-sidenav style="height:100%" layout="column" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
 
-      </md-content>
-    </md-sidenav>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h3>
+        About
+      </h3>
+      <span flex></span>
+    </div>
+  </md-toolbar>
 
-
-  </div>
-</div>
+  <md-content flex>
+    <md-list>
+      <md-card>
+        <md-card-title-media>
+          <div class="md-media-sm">
+            <img ng-src="{{info.imagePath}}" class="md-card">
+          </div>
+        </md-card-title-media>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Information</span>
+            <p class="md-subhead">
+              <md-icon><i class="material-icons">person</i></md-icon>{{info.author}}</p>
+            <p class="md-subhead">
+              <md-icon><i class="material-icons">email</i></md-icon>{{info.email}}</p>
+            <p class="md-subhead">
+              <md-icon><i class="material-icons">phone</i></md-icon>{{info.phone}}</p>
+            <p class="md-subhead">
+              <md-icon><i class="material-icons">location_city</i></md-icon>{{info.location}}</p>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-item ng-repeat="item in menu">
+            <a>
+              <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                <md-button class="md-raised md-primary" ng-click="showDetailsDialog($event)">{{item.title}}</md-button>
+              </md-item-content>
+            </a>
+          </md-item>
+        </md-card-actions>
+      </md-card>
+    </md-list>
+  </md-content>
+</md-sidenav>
