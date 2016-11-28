@@ -1,4 +1,4 @@
-<md-sidenav style="height:100%" layout="column" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+<md-sidenav layout="column" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
 
   <md-toolbar>
     <div class="md-toolbar-tools">
@@ -10,6 +10,15 @@
   </md-toolbar>
 
   <md-content flex>
+    <div class="md-padding">
+      <md-nav-bar nav-bar-aria-label="social links">
+        <md-button  ng-repeat="detail in links" aria-label="{{detail.name}}" class="md-icon-button md-mini" ng-href="{{detail.link}}">
+          <md-tooltip md-direction"down" ng-autohide="true"> {{detail.name}} </md-tooltip>
+          <md-icon> <img class="png-icon" ng-src="{{detail.icon}}" /> </md-icon>
+        </md-button>
+      </md-nav-bar>
+    </div>
+
     <md-list>
       <md-card>
         <md-card-title-media>
@@ -30,11 +39,11 @@
               <md-icon><i class="material-icons">location_city</i></md-icon>{{info.location}}</p>
           </md-card-title-text>
         </md-card-title>
-        <md-card-actions layout="row" layout-align="end center">
+        <md-card-actions layout="row" layout-align="end end">
           <md-item ng-repeat="item in menu">
             <a>
               <md-item-content md-ink-ripple layout="row" layout-align="start center">
-                <md-button class="md-raised md-primary" ng-click="showDetailsDialog($event)">{{item.title}}</md-button>
+                <md-button class="md-raised md-primary" ng-click="showTabDialog($event)">{{item.title}}</md-button>
               </md-item-content>
             </a>
           </md-item>

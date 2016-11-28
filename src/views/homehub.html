@@ -1,0 +1,79 @@
+<md-content flex md-scroll-y>
+    <div layout="column" layout-fill>
+        <div>
+            <section>
+                <md-content>
+                    <div layout="row" layout-xs="column" layout-align="center center">
+                        <div>
+                            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                                <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                                    <div>
+                                        <img style="width:1550px; max-height: 750px; max-width:100%;" ng-src="{{slide.image}}">
+                                        <div class="carousel-caption">
+                                            <h4>Slide {{slide.id}}</h4>
+                                            <p>{{slide.text}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </md-content>
+            </section>
+
+            <section>
+                <div layout="row" layout-xs="column">
+                    <div flex ng-repeat="card in cards">
+                        <md-card>
+                            <img ng-src="{{card.imagePath}}" class="md-card-image" alt="Washed Out">
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <span class="md-headline">{{card.title}}</span>
+                                </md-card-title-text>
+                            </md-card-title>
+                            <md-card-content>
+                                <p>{{card.description}}</p>
+                            </md-card-content>
+                        </md-card>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div layout="row" layout-xs="column">
+                    <div flex>
+                        <div layout="column">
+                            <md-card>
+                                <md-card-title>
+                                    <md-card-title-text>
+                                        <h1><b>Skills</b></h1>
+                                    </md-card-title-text>
+                                </md-card-title>
+                                <md-card-content>
+                                    <div layout="row">
+                                        <div layout="column" flex>
+                                            <h3>Programming Languages</h3>
+                                            <div ng-repeat="detail in languages">
+                                                <h4>{{detail.name}}</h4>
+                                                <span uib-rating ng-model="detail.rate" max="10" read-only="true" aria-labelledby="default-rating"></span>
+                                                <br />
+                                            </div>
+                                        </div>
+                                        <div layout="column" flex>
+                                            <h3>Evironments</h3>
+                                            <div ng-repeat="detail in environment">
+                                                <h4>{{detail.name}}</h4>
+                                                <span uib-rating ng-model="detail.rate" max="10" read-only="true" aria-labelledby="default-rating"></span>
+                                                <br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </md-card-content>
+                            </md-card>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</md-content>

@@ -1,11 +1,11 @@
 
-angular.module('ChatApp', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngSanitize'])
+angular.module('ChatApp', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngSanitize', 'ui.bootstrap'])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
-            templateUrl: 'views/home.html',
+            templateUrl: 'views/homehub.html',
             controller: 'HomeController'
         }).when('/social/', {
-            templateUrl: 'views/social.html',
+            templateUrl: 'views/socialhub.html',
             controller: 'HomeController'
         }).otherwise({
             redirectTo: "/"

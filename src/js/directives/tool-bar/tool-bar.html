@@ -1,21 +1,16 @@
-
 <md-toolbar>
-    <div class="md-toolbar-tools" layout="row">
-      <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">
-        <md-icon><i class="material-icons">menu</i></md-icon>
-      </md-button>
-      <h3> </h3>
-      <span flex></span>
-      <fab-button></fab-button>
-    </div>
-  </md-toolbar>
-      
+  <div class="md-toolbar-tools" layout="row">
+    <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu">
+      <md-icon><i class="material-icons">account_box</i></md-icon>
+    </md-button>
+    <span flex></span>
+  </div>
+</md-toolbar>
+
 
 <md-content class="md-padding">
-    <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-      <md-nav-item md-nav-href="#home" name="Home Page">Home Hub</md-nav-item>
-      <md-nav-item md-nav-href="#social" name="Social Page">Social Hub</md-nav-item>
-    </md-nav-bar>
-  </md-content>
-
-         
+  <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+    <md-nav-item md-nav-href="#home" name="Home Page">Home Hub</md-nav-item>
+    <md-nav-item md-nav-href="#social" name="Social Page">Social Hub</md-nav-item>
+  </md-nav-bar>
+</md-content>

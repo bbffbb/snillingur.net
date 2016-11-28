@@ -16,3 +16,9 @@ md-sidenav.md-closed.md-locked-open-add-active {
    width: 7rem;
  }
 
+  .horizontal-collapse {
+    height: 70px;
+  }
+  .navbar-collapse.in {
+    overflow-y: hidden;
+  }

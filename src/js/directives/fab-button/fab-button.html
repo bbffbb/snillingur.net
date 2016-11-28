@@ -4,28 +4,25 @@
     <md-tooltip md-direction="top">Social Media</md-tooltip>
 </md-button>
 -->
-<div layout="column" ng-controller="HomeController as demo" ng-cloak>
+<div layout="column" ng-cloak>
 
-    <md-fab-speed-dial ng-hide="demo.hidden" md-direction="left" md-open="demo.isOpen" class="md-scale" ng-class="{ 'md-hover-full': demo.hover }"
-        ng-mouseenter="demo.isOpen=true" ng-mouseleave="demo.isOpen=false">
+    <md-fab-speed-dial ng-hide="false" md-direction="up" md-open="false" 
+        class="md-scale md-fab-bottom-right" hide-gt-md>
         <md-fab-trigger>
             <md-button class="md-fab" aria-label="Add...">
                 <md-icon><i class="material-icons">public</i></md-icon>
-                <md-tooltip md-direction="bottom" md-visible="tooltipVisible">Social Media</md-tooltip>
+                <md-tooltip md-direction="left" md-visible="false">Social Media</md-tooltip>
             </md-button>
         </md-fab-trigger>
 
         <md-fab-actions>
-            <div ng-repeat="item in demo.items">
-                <md-button aria-label="{{item.name}}" class=" md-primary md-icon-button" ng-href="{{item.link}}">
-                    <md-tooltip md-direction="{{item.direction}}" md-visible="tooltipVisible" md-autohide="false">
+            <div ng-repeat="item in links">
+                <md-button aria-label="{{item.name}}" class="md-icon-button md-mini" ng-href="{{item.link}}">
+                    <md-tooltip md-direction="left" md-autohide="false">
                         {{item.name}}
                     </md-tooltip>
-
                     <md-icon ><img class="png-icon"  ng-src="{{item.icon}}"/> </md-icon>
                 </md-button>
-
-    
             </div>
         </md-fab-actions>
     </md-fab-speed-dial>

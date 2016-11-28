@@ -51,6 +51,7 @@ gulp.task('html', function () {
 
 gulp.task('libs', function () {
     gulp.src([
+      'libs/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'libs/jquery/dist/jquery.min.js',
       'libs/angular/angular.min.js',
       'libs/angular-sanitize/angular-sanitize.js',
@@ -68,7 +69,11 @@ gulp.task('libs', function () {
 
 gulp.task('fonts', function () {
     gulp.src([
-      
+      'libs/bootstrap/fonts/glyphicons-halflings-regular.ttf',
+      'libs/bootstrap/fonts/glyphicons-halflings-regular.eot',
+      'libs/bootstrap/fonts/glyphicons-halflings-regular.svg',
+      'libs/bootstrap/fonts/glyphicons-halflings-regular.woff',
+      'libs/bootstrap/fonts/glyphicons-halflings-regular.woff2',
     ])
     .pipe(gulp.dest('build/fonts'));
 });
