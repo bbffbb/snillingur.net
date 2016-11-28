@@ -33,7 +33,11 @@
   <side-nav></side-nav>
   <div layout="column" class="relative" layout-fill role="main">
     <tool-bar></tool-bar>
-    <ng-view></ng-view>
+    <md-content >
+      <div layout="column" layout-fill>
+        <ng-view></ng-view>
+      </div>
+    </md-content>
   </div>
 
 

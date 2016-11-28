@@ -1,8 +1,8 @@
 angular.module('ChatApp').controller("HomeController",
     ['$scope', '$location', '$timeout', '$mdBottomSheet', '$mdSidenav', '$mdDialog',
-        function($scope, $location, $timeout, $mdBottomSheet, $mdSidenav, $mdDialog) {
+        function ($scope, $location, $timeout, $mdBottomSheet, $mdSidenav, $mdDialog) {
 
-            $scope.resume = [
+            $scope.work = [
                 { company: "Sandbrún ehf", title: "Captain / 2nd engineer / Sailor", description: "asdfælj", started: "2004", ended: "2016" },
                 { company: "Sandbrún ehf", title: "Captain / 2nd engineer / Sailor", description: "asdfælj", started: "2004", ended: "2016" },
                 { company: "Sandbrún ehf", title: "Captain / 2nd engineer / Sailor", description: "asdfælj", started: "2004", ended: "2016" },
@@ -38,9 +38,6 @@ angular.module('ChatApp').controller("HomeController",
                 blue: Math.floor(Math.random() * 255)
             };
 
-            $scope.rating1 = 3;
-            $scope.rating2 = 2;
-            $scope.rating3 = 4;
 
 
             $scope.disabled3 = 70;
@@ -51,24 +48,24 @@ angular.module('ChatApp').controller("HomeController",
 
             $scope.cards = [{
                 title: "My Philosophy",
-                description: "my philosophy is..",
-                imagePath: "/img/philosophy.png"
+                description: "I'm always focusing on the performance, design and usability in my products. By reading about and trying out new features i have increased my coding knowledge.",
+                imagePath: "/img/cards/philosophy.png"
             },
             {
                 title: "My Mission",
-                description: "my philosophy is..",
-                imagePath: "/img/mission.png"
+                description: "I'm a highly motivated, creative and reliable developer. Im allways trying to better my self when it comes to coding with one mission. To become better developer.",
+                imagePath: "/img/cards/mission.png"
             },
             {
                 title: "My Process",
-                description: "my philosophy is..",
-                imagePath: "/img/process.png"
+                description: "When i'm developing my goal is allways to complete the project, but when it is done i have the tendencies to add a little more extra to make it better than requested.",
+                imagePath: "/img/cards/process.png"
             }];
 
             $scope.info = {
                 author: "Birkir Freyr Baldursson",
                 email: "Birkirfreyrbaldurss@gmail.com",
-                imagePath: "/img/baraeg.jpg",
+                imagePath: "/img/profile/baraeg.jpg",
                 phone: "8456776",
                 location: "Reykjavík, Iceland"
             };
@@ -88,74 +85,39 @@ angular.module('ChatApp').controller("HomeController",
 
 
 
-
-
-            $scope.showTabDialog = function(ev) {
+            $scope.showWorkDialog = function (ev) {
                 $mdDialog.show({
-                    templateUrl: 'directives/dialogs/details.html',
+                    templateUrl: 'directives/dialogs/work.html',
                     parent: angular.element(document.body),
                     targetEvent: ev,
                     clickOutsideToClose: true,
+                    fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+                });
+            };
 
+            $scope.showEducationDialog = function (ev) {
+                $mdDialog.show({
+                    templateUrl: 'directives/dialogs/education.html',
+                    parent: angular.element(document.body),
+                    targetEvent: ev,
+                    clickOutsideToClose: true,
+                    fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+                });
+            };
+
+            $scope.showSkillsDialog = function (ev) {
+                $mdDialog.show({
+                    templateUrl: 'directives/dialogs/skills.html',
+                    parent: angular.element(document.body),
+                    targetEvent: ev,
+                    clickOutsideToClose: true,
+                    fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
                 });
             };
 
 
-            $scope.myInterval = 5000;
-            $scope.noWrapSlides = false;
-            $scope.active = 0;
-            var slides = $scope.slides = [];
-            var currIndex = 0;
 
-            $scope.addSlide = function() {
-                var newWidth = 600 + slides.length + 1;
-                slides.push({
-                    image: '/img/baraeg.jpg',
-                    text: ['Nice image', 'Awesome photograph', 'That is so cool', 'I love that'][slides.length % 4],
-                    id: currIndex++
-                });
-            };
 
-            $scope.randomize = function() {
-                var indexes = generateIndexesArray();
-                assignNewIndexesToSlides(indexes);
-            };
-
-            for (var i = 0; i < 4; i++) {
-                $scope.addSlide();
-            }
-
-            // Randomize logic below
-
-            function assignNewIndexesToSlides(indexes) {
-                for (var i = 0, l = slides.length; i < l; i++) {
-                    slides[i].id = indexes.pop();
-                }
-            }
-
-            function generateIndexesArray() {
-                var indexes = [];
-                for (var i = 0; i < currIndex; ++i) {
-                    indexes[i] = i;
-                }
-                return shuffle(indexes);
-            }
-
-            // http://stackoverflow.com/questions/962802#962890
-            function shuffle(array) {
-                var tmp, current, top = array.length;
-
-                if (top) {
-                    while (--top) {
-                        current = Math.floor(Math.random() * (top + 1));
-                        tmp = array[current];
-                        array[current] = array[top];
-                        array[top] = tmp;
-                    }
-                }
-
-                return array;
-            }
 
 
             $scope.links = [
@@ -167,7 +129,7 @@ angular.module('ChatApp').controller("HomeController",
                 { name: "LinkedIn", link: "http://www.linkedin.com/in/birkir-freyr-baldursson", icon: "img/icons/linkedin.png", direction: "top" }
             ];
 
-            $scope.toggleSidenav = function(menuId) {
+            $scope.toggleSidenav = function (menuId) {
                 $mdSidenav(menuId).toggle();
             };
 

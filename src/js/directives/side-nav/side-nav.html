@@ -12,8 +12,8 @@
   <md-content flex>
     <div class="md-padding">
       <md-nav-bar nav-bar-aria-label="social links">
-        <md-button  ng-repeat="detail in links" aria-label="{{detail.name}}" class="md-icon-button md-mini" ng-href="{{detail.link}}">
-          <md-tooltip md-direction"down" ng-autohide="true"> {{detail.name}} </md-tooltip>
+        <md-button ng-repeat="detail in links" aria-label="{{detail.name}}" class="md-icon-button md-mini" ng-href="{{detail.link}}">
+          <md-tooltip md-direction "down" ng-autohide="true"> {{detail.name}} </md-tooltip>
           <md-icon> <img class="png-icon" ng-src="{{detail.icon}}" /> </md-icon>
         </md-button>
       </md-nav-bar>
@@ -39,14 +39,10 @@
               <md-icon><i class="material-icons">location_city</i></md-icon>{{info.location}}</p>
           </md-card-title-text>
         </md-card-title>
-        <md-card-actions layout="row" layout-align="end end">
-          <md-item ng-repeat="item in menu">
-            <a>
-              <md-item-content md-ink-ripple layout="row" layout-align="start center">
-                <md-button class="md-raised md-primary" ng-click="showTabDialog($event)">{{item.title}}</md-button>
-              </md-item-content>
-            </a>
-          </md-item>
+        <md-card-actions layout="row" layout-align="center center">
+          <md-button class="md-primary md-raised" href="https://drive.google.com/file/d/0BxCdBVgdJSG2V2xQaTRGU2lXd3M/view?usp=sharing" target="_blank" md-autofocus>
+            Download CV(icelandic)
+          </md-button>
         </md-card-actions>
       </md-card>
     </md-list>

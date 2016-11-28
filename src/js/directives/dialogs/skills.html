@@ -1,0 +1,39 @@
+<md-dialog aria-label="Skills">
+    <form ng-cloak>
+
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Education</h2>
+                <span flex></span>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div layout="column">
+                <div>
+                    <h3>Programming Languages</h3>
+                    <div ng-repeat="detail in languages">
+                        <h4>{{detail.name}}</h4>
+                        <h4 uib-rating ng-model="detail.rate" max="10" read-only="true" aria-labelledby="default-rating"></h4>
+                        <br />
+                    </div>
+                </div>
+                <div>
+                    <h3>Evironments</h3>
+                    <div ng-repeat="info in environment">
+                        <h4>{{info.name}}</h4>
+                        <h4 uib-rating ng-model="info.rate" max="10" read-only="true" aria-labelledby="default-rating"></h4>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button href="https://drive.google.com/file/d/0BxCdBVgdJSG2V2xQaTRGU2lXd3M/view?usp=sharing" target="_blank" md-autofocus>
+                Download CV(icelandic)
+            </md-button>
+            <span flex></span>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
