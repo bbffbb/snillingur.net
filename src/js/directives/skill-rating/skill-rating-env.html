@@ -1,0 +1,7 @@
+<div ng-controller="HomeController">
+    <div ng-repeat="detail in environment">
+        <p>{{detail.name}}</p>
+        <p uib-rating ng-model="detail.rate" max="10" read-only="true" aria-labelledby="default-rating"></p>
+        <br />
+    </div>
+</div>

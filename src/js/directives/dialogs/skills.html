@@ -3,30 +3,48 @@
 
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <h2>Education</h2>
+                <h2>Self observation</h2>
                 <span flex></span>
             </div>
         </md-toolbar>
 
-        <md-dialog-content>
-            <div layout="column">
-                <div>
-                    <h3>Programming Languages</h3>
-                    <div ng-repeat="detail in languages">
-                        <h4>{{detail.name}}</h4>
-                        <h4 uib-rating ng-model="detail.rate" max="10" read-only="true" aria-labelledby="default-rating"></h4>
-                        <br />
+        <md-dialog-content md-dynamic-height>
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <h1><b>Skills</b></h1>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+
+                    <div layout="row" layout-xs="column">
+                        <div flex>
+                            <md-card>
+                                <md-card-title>
+                                    <md-card-title-text>
+                                        <h3>Languages</h3>
+                                    </md-card-title-text>
+                                </md-card-title>
+                                <md-card-content>
+                                    <skill-rating-lang></skill-rating-lang>
+                                </md-card-content>
+                            </md-card>
+                        </div>
+                        <div flex>
+                            <md-card>
+                                <md-card-title>
+                                    <md-card-title-text>
+                                        <h3>Environment</h3>
+                                    </md-card-title-text>
+                                </md-card-title>
+                                <md-card-content>
+                                    <skill-rating-env></skill-rating-env>
+                                </md-card-content>
+                            </md-card>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <h3>Evironments</h3>
-                    <div ng-repeat="info in environment">
-                        <h4>{{info.name}}</h4>
-                        <h4 uib-rating ng-model="info.rate" max="10" read-only="true" aria-labelledby="default-rating"></h4>
-                        <br />
-                    </div>
-                </div>
-            </div>
+                </md-card-content>
+            </md-card>
         </md-dialog-content>
 
         <md-dialog-actions layout="row">
