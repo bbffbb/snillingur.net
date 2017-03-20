@@ -25,5 +25,8 @@
     "gulp-webserver": "^0.9.1",
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {
+    "angular-resource": "^1.6.2"
   }
 }

@@ -1,5 +1,5 @@
 
-angular.module('ChatApp').directive('toolBar', function () {
+angular.module('app').directive('toolBar', function () {
     return {
         restrict: 'E',
         templateUrl: '/directives/tool-bar/tool-bar.html',

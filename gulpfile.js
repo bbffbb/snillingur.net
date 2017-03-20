@@ -51,19 +51,30 @@ gulp.task('html', function () {
 
 gulp.task('libs', function () {
     gulp.src([
-      'libs/angular-bootstrap/ui-bootstrap-tpls.min.js',
-      'libs/jquery/dist/jquery.min.js',
-      'libs/angular/angular.min.js',
-      'libs/angular-sanitize/angular-sanitize.js',
-      'libs/angular-touch/angular-touch.min.js',
-      'libs/angular-animate/angular-animate.js',
-      'libs/angular-aria/angular-aria.min.js',
-      'libs/angular-messages/angular-messages.min.js',
-      'libs/angular-material/angular-material.js',
-      'libs/angular-material/angular-material.min.css',
-      'libs/angular-route/angular-route.min.js',
-      'libs/bootstrap/dist/css/bootstrap.min.css',
-      'libs/bootstrap/dist/js/bootstrap.min.js'])
+        'libs/angular-perfect-scrollbar/src/angular-perfect-scrollbar.js',
+        'libs/perfect-scrollbar/min/perfect-scrollbar.min.js',
+        'libs/perfect-scrollbar/min/perfect-scrollbar.min.css',
+        
+        'libs/angular-timeline/dist/angular-timeline.css',
+        'libs/angular-timeline/dist/angular-timeline.js',
+        'libs/angular-scroll-animate/dist/angular-scroll-animate.js',
+        'libs/angular-scroll/angular-scroll.js',
+        'libs/animate.css/animate.min.css',
+
+        'libs/angular-bootstrap/ui-bootstrap-tpls.min.js',
+        'libs/jquery/dist/jquery.min.js',
+        'libs/angular/angular.min.js',
+        'libs/angular-sanitize/angular-sanitize.js',
+        'libs/angular-touch/angular-touch.min.js',
+        'libs/angular-animate/angular-animate.js',
+        'libs/angular-aria/angular-aria.min.js',
+        'libs/angular-messages/angular-messages.min.js',
+        'libs/angular-material/angular-material.js',
+        'libs/angular-resource/angular-resource.js',
+        'libs/angular-material/angular-material.min.css',
+        'libs/angular-route/angular-route.min.js',
+        'libs/bootstrap/dist/css/bootstrap.min.css',
+        'libs/bootstrap/dist/js/bootstrap.min.js'])
     .pipe(gulp.dest('build/libs'));
 });
 
@@ -79,6 +90,8 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('img', function () {
+    gulp.src('src/img/*')
+    .pipe(gulp.dest('build/img'));
     gulp.src('src/img/cards/*')
     .pipe(gulp.dest('build/img/cards'));
     gulp.src('src/img/icons/*')
@@ -104,7 +117,7 @@ gulp.task('directives', function () {
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function () {
     gulp.watch('src/*.html', ['html']);
-    gulp.watch('src/css/**/*.css', ['css']);
+    gulp.watch('src/css/*.css', ['css']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/views/*.html', ['views']);
     gulp.watch('src/js/directives/**/*.html', ['directives']);

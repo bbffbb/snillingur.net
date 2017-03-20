@@ -1,0 +1,263 @@
+<section id="about">
+    <div class="md-padding container-fluid">
+        <div layout="row">
+            <div flex style="height:90vh">
+                <div layout="column" class=" container">
+                    <div class="md-padding">
+                        <h3 class="md-headline">About me. </h3>
+                    </div>
+                    <div class="md-padding">
+                        <md-icon>
+                            <i class="material-icons">face </i>
+                        </md-icon>
+                        <span class="md-subhead">Birkir Freyr Baldursson</span>
+                    </div>
+                    <div class="md-padding">
+                        <md-icon>
+                            <i class="material-icons">email </i>
+                        </md-icon>
+                        <a class="md-subhead" href="mailto:birkirfreyrbaldurss@gmail.com?Subject=Request%20From%20Web" target="">birkirfreyrbaldurss@gmail.com</a>
+                    </div>
+                    <div class="md-padding">
+                        <md-icon>
+                            <i class="material-icons">location_city </i>
+                        </md-icon>
+                        <span class="md-subhead">Reykjavík, Iceland</span>
+                    </div>
+                    <div class="md-padding">
+                        <md-icon>
+                            <i class="material-icons">insert_emoticon </i>
+                        </md-icon>
+                        <span class="md-subhead">26 years old</span>
+                    </div>
+                    <div class="md-padding">
+                        <md-icon>
+                            <i class="material-icons">phone </i>
+                        </md-icon>
+                        <a class="md-subhead" href="tel://354-845-6776">8456776</a>
+                    </div>
+                </div>
+            </div>
+            <div layout="column" style="position: relative; bottom:0px; right:0px;">
+                <div flex>
+                </div>
+                <div layout="column">
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:lightgrey">keyboard_arrow_down</i>
+                    </md-icon>
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:grey">keyboard_arrow_down</i>
+                    </md-icon>
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:dimgrey">keyboard_arrow_down</i>
+                    </md-icon>
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:black">keyboard_arrow_down</i>
+                    </md-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="education">
+    <div class=" container-fluid">
+        <div layout="row">
+            <div flex style="height:auto">
+                <div layout="column" class="">
+                    <div class="md-padding">
+                        <h3 style="color:white" class="md-headline">My education </h3>
+                        <hr>
+                    </div>
+                    <div class="cd-horizontal-timeline container" layout="row" layout-xs="column" layout-align="center center">
+                        <timeline md-theme="dark-blue">
+                            <timeline-event ng-repeat="event in educationCards" side="{{event.side}}">
+                                <timeline-badge class="{{event.badgeClass}}" style="background-color:rgb(21,101,192)" ng-class="{ 'md-hover-full': demo.hover }">
+                                    <md-icon class="animated infinite pulse" style="color:white"><i class="material-icons">{{event.badgeIconClass}}</i></md-icon>
+                                    <md-tooltip md-direction="{{event.tooltipDirection}}" md-visible="tooltipVisible" md-autohide="false">
+                                        {{event.duration}}
+                                    </md-tooltip>
+                                </timeline-badge>
+                                <timeline-panel class="{{event.badgeClass}}" style="padding:0px">
+                                    <div flex-xs flex-gt-xs="100" layout="column">
+                                        <md-card md-theme="default">
+                                            <md-card-title>
+                                                <div flex="90">
+                                                    <md-card-title-media>
+                                                        <div class="md-media-xs card-media"><img ng-src="{{event.imagePath}}" class="md-card-image" /></div>
+                                                    </md-card-title-media>
+                                                    <md-card-title-text>
+                                                        <p class="">{{event.degree}} </p>
+                                                        <span class="md-caption">{{event.title}} <br />({{event.duration}})</span>
+                                                    </md-card-title-text>
+                                                </div>
+                                            </md-card-title>
+                                            <div>
+                                                <p ng-show="display1" class=" md-padding">{{event.content}} </p>
+                                                <p class="md-padding" style="color:black" ng-click="display1 = !display1" ng-hide="display1"><u>Show details</u></p>
+                                                <p class="md-padding" style="color:black" ng-click="display1 = !display1" ng-hide="!display1"><u>Hide details</u></p>
+                                            </div>
+                                            <md-card-actions layout="row" layout-align="end center" ng-hide="{{!item.hasWeb}}">
+                                                <md-button ng-href="{{item.website}}">Website</md-button>
+                                            </md-card-actions>
+                                        </md-card>
+                                    </div>
+                                </timeline-panel>   
+                            </timeline-event>
+                        </timeline>
+                    </div>
+                </div>
+            </div>
+            <div layout="column" style="position: relative; bottom:0px; right:0px; float:right">
+                <div flex>
+
+                </div>
+                <div layout="column">
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:lightgray">keyboard_arrow_down</i>
+                    </md-icon>
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:grey">keyboard_arrow_down</i>
+                    </md-icon>
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:black">keyboard_arrow_down</i>
+                    </md-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="work">
+    <div class="md-padding container-fluid">
+        <div layout="row">
+            <div style="height:auto">
+                <div layout="column" class="">
+                    <div class="md-padding">
+                        <h3 class="md-headline">Work experience </h3>
+                        <hr style="border-top:1px solid black">
+                    </div>
+                    <div layout="row" layout-xs="column" class="md-padding" layout-align="center center">
+                        <div flex-xs flex-gt-xs="60" layout="column">
+                            <md-card ng-repeat="item in workCards" md-theme="dark-blue" md-theme-watch>
+                                <div layout="row" layout-xs="column" layout-align="">
+                                    <div class="card-media" flex>
+                                        <img ng-src="{{item.imagePath}}" class="md-card-image img-responsive" alt="Washed Out" style="height:100%; width:100%">
+                                    </div>
+                                    <div flex>
+                                        <md-card-title>
+                                            <md-card-title-text>
+                                                <span class="md-headline">{{item.title}} <span class="md-caption">({{item.duration}})</span></span>
+                                                <span class="md-subhead"> <b>{{item.position}}</b></span>
+                                            </md-card-title-text>
+                                        </md-card-title>
+                                        <md-card-content>
+                                            <p>
+                                                {{item.description}}
+                                            </p>
+                                            <md-card-actions layout="row" layout-align="end center" ng-hide="{{!item.hasWeb}}">
+                                                <md-button ng-href="{{item.website}}">Website</md-button>
+                                            </md-card-actions>
+                                        </md-card-content>
+                                    </div>
+                                </div>
+                            </md-card>
+                        </div>
+                    </div>
+                </div>
+                <div layout="column" style="position: relative; bottom:0px; right:0px; float:right">
+                <div flex>
+                </div>
+                <div layout="column">
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:lightgray">keyboard_arrow_down</i>
+                     </md-icon>
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:grey">keyboard_arrow_down</i>
+                    </md-icon>
+                    <md-icon class="material-icons animated infinite bounce">
+                        <i class="material-icons" style="color:black">keyboard_arrow_down</i>
+                    </md-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="skills">
+    <div class="md-padding container-fluid">
+        <div layout="row">
+            <div flex style="height:auto">
+                <div layout="column" class="md-padding">
+                    <div class="md-padding">
+                        <h3 class="md-headline">Skills / Knowledge</h3>
+                        <hr>
+                    </div>
+                    <div class="md-padding container-fluid" style="height:auto">
+                        <div layout="row" layout-xs="column" flex>
+                            <div layout="column" style="" >
+                                <md-content class="md-padding">
+                                    <h2 class="md-title">Programming Languages</h2>
+                                    <md-chips>
+                                        <md-chip>C++</md-chip>
+                                        <md-chip>C#</md-chip>
+                                        <md-chip>Java</md-chip>
+                                        <md-chip>JavaScript</md-chip>
+                                        <md-chip>HTML / CSS</md-chip>
+                                        <md-chip>Linux/Bash</md-chip>
+                                        <md-chip>SQL</md-chip>
+                                    </md-chips>
+                                </md-content>
+                                <md-content class="md-padding" flex>
+                                    <h2 class="md-title">JavaScript environment/frameworks</h2>
+                                    <md-chips>
+                                        <md-chip>Node.js</md-chip>
+                                        <md-chip>Express.js</md-chip>
+                                        <md-chip>Angular.js</md-chip>
+                                        <md-chip>MongoDB</md-chip>
+                                        <md-chip>REST</md-chip>
+                                    </md-chips>
+                                </md-content>
+                                <md-content class="md-padding" flex>
+                                    <h2 class="md-title">C# environment</h2>
+                                    <md-chips>
+                                        <md-chip>ASP.NET</md-chip>
+                                        <md-chip>ASP.NET MVC</md-chip>
+                                    </md-chips>
+                                </md-content>
+                            </div>
+                            <div>
+                                <md-content class="md-padding" flex>
+                                    <h2 class="md-title">Personal skills</h2>
+                                    <md-chips>
+                                        <md-chip>Focused</md-chip>
+                                        <md-chip>Reliable</md-chip>
+                                        <md-chip>Co-operative</md-chip>
+                                        <md-chip>Creative</md-chip>
+                                        <md-chip>Communicative</md-chip>
+                                        <md-chip>Effective</md-chip>
+                                    </md-chips>
+                                </md-content>
+                                <md-content class="md-padding" flex>
+                                    <h2 class="md-title">Environment</h2>
+                                    <md-chips>
+                                        <md-chip>Github</md-chip>
+                                        <md-chip>Docker</md-chip>
+                                        <md-chip>DynamicsNav</md-chip>
+                                        <md-chip>Office</md-chip>
+                                        <md-chip>Windows</md-chip>
+                                        <md-chip>macOS</md-chip>
+                                    </md-chips>
+                                </md-content>
+                                <md-content class="md-padding" flex>
+                                    <h2 class="md-title">Spoken language</h2>
+                                    <md-chips>
+                                        <md-chip>Icelandic</md-chip>
+                                        <md-chip>English</md-chip>
+                                    </md-chips>
+                                </md-content>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

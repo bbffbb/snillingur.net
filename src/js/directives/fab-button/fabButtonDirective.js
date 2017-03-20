@@ -1,5 +1,5 @@
 
-angular.module('ChatApp').directive('fabButton', function () {
+angular.module('app').directive('fabButton', function () {
     return {
         restrict: 'E',
         templateUrl: '/directives/fab-button/fab-button.html',
