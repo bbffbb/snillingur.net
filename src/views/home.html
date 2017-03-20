@@ -14,12 +14,6 @@
                     </div>
                     <div class="md-padding">
                         <md-icon>
-                            <i class="material-icons">email </i>
-                        </md-icon>
-                        <a class="md-subhead" href="mailto:birkirfreyrbaldurss@gmail.com?Subject=Request%20From%20Web" target="">birkirfreyrbaldurss@gmail.com</a>
-                    </div>
-                    <div class="md-padding">
-                        <md-icon>
                             <i class="material-icons">location_city </i>
                         </md-icon>
                         <span class="md-subhead">Reykjavík, Iceland</span>
@@ -35,6 +29,12 @@
                             <i class="material-icons">phone </i>
                         </md-icon>
                         <a class="md-subhead" href="tel://354-845-6776">8456776</a>
+                    </div>
+                     <div class="md-padding">
+                        <md-icon>
+                            <i class="material-icons">email </i>
+                        </md-icon>
+                        <a class="md-subhead" href="mailto:birkirfreyrbaldurss@gmail.com?Subject=Request%20From%20Web" target="">Gmail</a>
                     </div>
                 </div>
             </div>
@@ -135,10 +135,10 @@
                         <h3 class="md-headline">Work experience </h3>
                         <hr style="border-top:1px solid black">
                     </div>
-                    <div layout="row" layout-xs="column" class="md-padding" layout-align="center center">
-                        <div flex-xs flex-gt-xs="60" layout="column">
+                    <div layout="row" layout-xs="column" layout-gt-xs="column" class="md-padding" layout-align="center center">
+                        <div flex-xs flex-gt-sm="70" layout="column" >
                             <md-card ng-repeat="item in workCards" md-theme="dark-blue" md-theme-watch>
-                                <div layout="row" layout-xs="column" layout-align="">
+                                <div layout="row" layout-xs="column" layout-md="column" layout-align="">
                                     <div class="card-media" flex>
                                         <img ng-src="{{item.imagePath}}" class="md-card-image img-responsive" alt="Washed Out" style="height:100%; width:100%">
                                     </div>
@@ -168,9 +168,6 @@
                 </div>
                 <div layout="column">
                     <md-icon class="material-icons animated infinite bounce">
-                        <i class="material-icons" style="color:lightgray">keyboard_arrow_down</i>
-                     </md-icon>
-                    <md-icon class="material-icons animated infinite bounce">
                         <i class="material-icons" style="color:grey">keyboard_arrow_down</i>
                     </md-icon>
                     <md-icon class="material-icons animated infinite bounce">
@@ -190,10 +187,10 @@
                         <h3 class="md-headline">Skills / Knowledge</h3>
                         <hr>
                     </div>
-                    <div class="md-padding container-fluid" style="height:auto">
-                        <div layout="row" layout-xs="column" flex>
+                    <div class="md-padding container" style="">
+                        <div layout="column" layout-xs="column" style="">
                             <div layout="column" style="" >
-                                <md-content class="md-padding">
+                                <md-content class="md-padding" >
                                     <h2 class="md-title">Programming Languages</h2>
                                     <md-chips>
                                         <md-chip>C++</md-chip>
@@ -205,8 +202,8 @@
                                         <md-chip>SQL</md-chip>
                                     </md-chips>
                                 </md-content>
-                                <md-content class="md-padding" flex>
-                                    <h2 class="md-title">JavaScript environment/frameworks</h2>
+                                <md-content class="md-padding" >
+                                    <h2 class="md-title">JavaScript frameworks</h2>
                                     <md-chips>
                                         <md-chip>Node.js</md-chip>
                                         <md-chip>Express.js</md-chip>
@@ -215,7 +212,7 @@
                                         <md-chip>REST</md-chip>
                                     </md-chips>
                                 </md-content>
-                                <md-content class="md-padding" flex>
+                                <md-content class="md-padding" >
                                     <h2 class="md-title">C# environment</h2>
                                     <md-chips>
                                         <md-chip>ASP.NET</md-chip>
@@ -223,8 +220,8 @@
                                     </md-chips>
                                 </md-content>
                             </div>
-                            <div>
-                                <md-content class="md-padding" flex>
+                            <div flex>
+                                <md-content class="md-padding" >
                                     <h2 class="md-title">Personal skills</h2>
                                     <md-chips>
                                         <md-chip>Focused</md-chip>
@@ -235,7 +232,7 @@
                                         <md-chip>Effective</md-chip>
                                     </md-chips>
                                 </md-content>
-                                <md-content class="md-padding" flex>
+                                <md-content class="md-padding" >
                                     <h2 class="md-title">Environment</h2>
                                     <md-chips>
                                         <md-chip>Github</md-chip>
@@ -246,7 +243,7 @@
                                         <md-chip>macOS</md-chip>
                                     </md-chips>
                                 </md-content>
-                                <md-content class="md-padding" flex>
+                                <md-content class="md-padding" >
                                     <h2 class="md-title">Spoken language</h2>
                                     <md-chips>
                                         <md-chip>Icelandic</md-chip>

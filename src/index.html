@@ -5,6 +5,8 @@
 
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
+  <link rel="icon" href="/img/large-blue-circle.png">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 
@@ -37,6 +39,7 @@
   <script type="text/javascript" src="libs/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
   
+  <title>BFB</title>
 
 </head>
 
@@ -64,7 +67,7 @@
 
     <div layout="row" layout-align="center center" style="height:50px">
       <div layout="column" md-scroll-shrink ng-if="true" class="footer" ng-repeat="item in links">
-        <md-button class="md-icon-button" id="footer-action" aria-label="{{item.name}}" ng-href="{{item.link}}">
+        <md-button class="md-icon-button" id="footer-action" aria-label="{{item.name}}" ng-href="{{item.link}}" style="width:100%">
           <img class="png-icon" ng-src="{{item.icon}}" style="width: 24px; height: 24px;">
         </md-button>
       </div>

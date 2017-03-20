@@ -1,7 +1,7 @@
 angular.module('app').controller("HomeController",
     ['$scope', '$http', '$location', '$timeout', '$resource', '$anchorScroll', '$document',
         function ($scope, $http, $location, $timeout, $resource, $anchorScroll, $document) {
-
+         
             $scope.workCards = [
                 {
                     title: "Sandbrún ehf",
@@ -132,14 +132,7 @@ angular.module('app').controller("HomeController",
                 var container = angular.element(document.getElementById('container'));
                 container.scrollTo(someElement, 0, 800);
             };
-            $scope.title = 'Welcome to my online portfolio.';
 
-            var imagePath = 'img/profile/baraeg.jpg';
-
-            $scope.goToAbout = function () {
-                $location.hash('about');
-                $anchorScroll();
-            };
 
 
             $scope.links = [
@@ -147,8 +140,7 @@ angular.module('app').controller("HomeController",
                 { name: "Twitter", link: "http://twitter.com/birkirfr", icon: "img/icons/twitter.png", direction: "bottom" },
                 { name: "Instagram", link: "http://www.instagram.com/birkirfr/", icon: "img/icons/instagram.png", direction: "bottom" },
                 { name: "Spotify", link: "http://play.spotify.com/user/1142285129", icon: "img/icons/spotify.png", direction: "bottom" },
-                { name: "Youtube", link: "http://www.youtube.com/user/birkirf", icon: "img/icons/youtube.png", direction: "bottom" },
-                { name: "LinkedIn", link: "http://www.linkedin.com/in/birkir-freyr-baldursson", icon: "img/icons/linkedin.png", direction: "top" },
+                { name: "LinkedIn", link: "http://www.linkedin.com/in/birkir-freyr-baldursson", icon: "img/icons/linkedin.png", direction: "bottom" },
                 { name: "Github", link: "http://github.com/bbffbb", icon:"img/icons/github.png", direction:"bottom"}
             ];
 
